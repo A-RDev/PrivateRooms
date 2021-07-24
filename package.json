@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Anton-Rosin-Dev/PrivateRooms/issues"
   },
-  "homepage": "https://github.com/Anton-Rosin-Dev/PrivateRooms#readme"
+  "homepage": "https://github.com/Anton-Rosin-Dev/PrivateRooms#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
 }
