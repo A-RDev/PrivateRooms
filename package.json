@@ -1,0 +1,19 @@
+{
+  "name": "privaterooms",
+  "version": "1.0.0",
+  "description": "Discord bot that creates private voice rooms for users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anton-Rosin-Dev/PrivateRooms.git"
+  },
+  "author": "Anton Rosin Dev.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anton-Rosin-Dev/PrivateRooms/issues"
+  },
+  "homepage": "https://github.com/Anton-Rosin-Dev/PrivateRooms#readme"
+}
