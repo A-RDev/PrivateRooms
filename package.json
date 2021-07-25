@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Anton-Rosin-Dev/PrivateRooms#readme",
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "node.date-time": "^1.2.2"
   }
 }
