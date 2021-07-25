@@ -1,5 +1,5 @@
 {
-    "token": "",
-    "create_rooms_channel_id": "",
-    "moder_role": ""
+    "token": "YOUR DISCORD BOT TOKEN HERE",
+    "create_rooms_channel_id": "VOICE CHANNEL NAMED create-a-voice ID HERE",
+    "moder_role": "MODERATOR ROLE THAT MUTE OR DEAF ANOTHER USERS IN PRIVATE CHANNELS PERMANENTLY"
 }
