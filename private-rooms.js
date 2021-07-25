@@ -48,7 +48,7 @@ module.exports = (client) => {
                 if (current_time < expiration_time) {
                     const time_left = (expiration_time - current_time) / 1000
                     newVoiceState.kick()
-                    const Emed = new Discord.MessageEmbed().setColor(0xFF0022).setDescription(`**Не так часто!** Подождите ещё **${time_left.toFixed(1)}**с. чтобы создать канал`)
+                    const Emed = new Discord.MessageEmbed().setColor(0xFF0022).setDescription(`**Не так часто!** Подождите ещё **${time_left.toFixed(1)}**с. чтобы создать канал\n**Not so often!** Wait another **${time_left.toFixed(1)}**s. to create a voice channel`)
                     newVoiceState.member.send(Emed).catch(() => console.log(generateTimeLog()+`\u001b[33mUnable to send message\u001b[0m ${newVoiceState.member.user.tag}`))
                     return
                 }
