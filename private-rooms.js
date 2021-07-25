@@ -1,7 +1,4 @@
-const config = {
-    create_rooms_channel_id : "", // "Create a private room" channel ID
-    moder_role : "" //people with this role may mute or deaf another users in private channels permanently
-}
+const config = require('./config.json')
 
 /**
  * ----------------------------------------------
