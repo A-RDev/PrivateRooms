@@ -1,23 +1,26 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
-const config = require('./config.json')
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+const config = require('./config.json');
 const fs = require('fs');
 const format = require('node.date-time');
 const logInterval = 6000;
-const intervalLogText = `The bot works, but there are no messages on any bot server`
+const intervalLogText = `The bot works, but there are no messages on any bot server`;
 
 bot.on('ready', () => {
 	let logtext = "";
 	logtext = `Logged in as ${bot.user.tag}`;
 	console.log(logtext);
 	log(logtext, "info");
-})
+});
 
 bot.on('message', msg => {
-  logtext = `${msg.channel.name}(${msg.guild.name}) : ${msg.author.tag} : ${msg.content}`;
-  console.log(`\n\n${logtext}`);
-  log(logtext, "msg");
+	if(!msg.author.bot){
+  	logtext = `${msg.channel.name}(${msg.guild.name}) : ${msg.author.tag} : ${msg.content}`;
+  	console.log(`\n\n${logtext}`);
+  	log(logtext, "msg");
+	}
 });
+
 function log(logText, logType) {
   function logTime(){
     return new Date().format('Y-MM-dd HH:mm:SS');
@@ -41,12 +44,12 @@ function log(logText, logType) {
     break;
   }
   logPrefix += " ";
-  let logResult = `(${bot.user.tag}): ${logTime()} ${logPrefix} ${logText}`
+  let logResult = `(${bot.user.tag}): ${logTime()} ${logPrefix} ${logText}`;
   
   fs.appendFile(`recent.log`, `${logResult}\n`, () =>{
     // setTimeout(log, logInterval, intervalLogText, "info");
   });
 };
 
-require('./private-rooms.js')(bot)
-bot.login(config.token)
+require('./private-rooms.js')(bot);
+bot.login(config.token);
